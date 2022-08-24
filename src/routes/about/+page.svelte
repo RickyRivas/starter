@@ -1,6 +1,6 @@
 <script>
 	// import external styles for this page
-	import '../../styles/about.scss';
+	import '../../styles/pages/about.scss';
 </script>
 
 <svelte:head>
@@ -8,19 +8,21 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<div class="content">
-	<h1>About this app</h1>
+<main id="about">
+	<div class="content">
+		<h1>About this app</h1>
 
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
+		<p>
+			This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
+			following into your command line and following the prompts:
+		</p>
 
-	<pre>npm create svelte@latest</pre>
+		<pre>npm create svelte@latest</pre>
 
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
-</div>
+		<p>
+			The page you're looking at is purely static HTML, with no client-side interactivity needed.
+			Because of that, we don't need to load any JavaScript. Try viewing the page's source, or
+			opening the devtools network panel and reloading.
+		</p>
+	</div>
+</main>

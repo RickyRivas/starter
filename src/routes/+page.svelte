@@ -1,4 +1,5 @@
 <script>
+	import '../styles/pages/home.scss';
 </script>
 
 <svelte:head>
@@ -6,9 +7,11 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	<h1>home</h1>
-</section>
+<main id="home">
+	<section>
+		<h1>home</h1>
+	</section>
+</main>
 
 <style>
 	section {

@@ -1,19 +1,4 @@
-<script>
-	import { page } from '$app/stores';
-	import '../../styles/layout/navigation.scss';
-	let isActive = false;
-
-	const toggle = () => {
-		isActive = !isActive;
-		document.body.classList.toggle('is-active');
-	};
-</script>
-
-<!-- Navigation Start -->
-<header>
-	<nav>
-		<a href="/" class="logo-wrapper">
-			<svg
+<svg
 				width="219"
 				height="81"
 				viewBox="0 0 219 81"
@@ -27,65 +12,3 @@
 					fill="black"
 				/>
 			</svg>
-		</a>
-
-		<ul class="links {isActive ? 'is-active' : ''}">
-			<li class:active={$page.url.pathname === '/'} class="link">
-				<a href="/" on:click={toggle}>Home</a>
-			</li>
-			<li class:active={$page.url.pathname === '/services'} class="link">
-				<a href="/services" on:click={toggle}>Services</a>
-			</li>
-			<li class:active={$page.url.pathname === '/portfolio'} class="link">
-				<a href="/portfolio" on:click={toggle}>Portfolio</a>
-			</li>
-			<li class:active={$page.url.pathname === '/about'} class="link">
-				<a href="/about" on:click={toggle}>About</a>
-			</li>
-			<li class:active={$page.url.pathname === '/contact'} class="link">
-				<a href="/contact" on:click={toggle}>Contact</a>
-			</li>
-			<li class="link social">
-				<a href="/">
-					<img
-						class=""
-						src="/instagram.svg"
-						alt=""
-						width="25"
-						height="25"
-						loading="lazy"
-						decoding="async"
-					/>
-					<p>Instagram</p>
-				</a>
-				<a href="/">
-					<img
-						class=""
-						src="/facebook.svg"
-						alt=""
-						width="25"
-						height="25"
-						loading="lazy"
-						decoding="async"
-					/>
-					<p>Facebook</p>
-				</a>
-			</li>
-		</ul>
-
-		<button
-			class="hamburger hamburger--squeeze {isActive ? 'is-active' : ''}"
-			type="button"
-			on:click={toggle}
-		>
-			<span class="hamburger-box">
-				<span class="hamburger-inner" />
-			</span>
-		</button>
-	</nav>
-	<div class="nav-overlay {isActive ? 'is-active' : ''}" on:click={toggle} />
-</header>
-
-<!-- Navigation End -->
-<style>
-</style>
