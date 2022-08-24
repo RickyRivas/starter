@@ -1,6 +1,6 @@
 // Contact Us Page
 main#contact {
-    width: 100vw;
+    width: 100%;
     position: relative;
 
     .container {
@@ -9,12 +9,23 @@ main#contact {
         flex-direction: column;
         padding: 4em 1em;
 
+        @media only screen and (min-width: 768px) {
+            width: 100%;
+            max-width: 650px;
+            margin: auto;
+            padding: 4em 1em;
+        }
+
         .form-container {
             display: flex;
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
             margin-bottom: 4em;
+
+            @media only screen and (min-width: 768px) {
+                margin-bottom: 2em;
+            }
 
 
             form {
@@ -174,7 +185,6 @@ main#contact {
                     a {
                         color: black;
                         text-decoration: none;
-                        font-weight: bold;
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
@@ -195,7 +205,6 @@ main#contact {
                             color: black;
                             margin-bottom: 0.1em;
                             font-size: 1.2em;
-                            font-weight: bold;
                         }
                     }
                 }
@@ -207,13 +216,8 @@ main#contact {
 
     @media (min-width: 768px) {
         .container {
-            width: 100%;
-            max-width: 650px;
-            margin: auto;
-            padding: 4em 1em;
 
             .form-container {
-                margin-bottom: 2em;
 
                 form {
                     width: 100%;
@@ -239,9 +243,6 @@ main#contact {
                         input[type="email"],
                         input[type="number"] {
                             width: 100%;
-                            // border-radius: unset;
-
-                            // height: 46px;
                             border: 2px solid #dbe3df;
                         }
 
@@ -279,31 +280,6 @@ main#contact {
                 form {
                     padding: 2em;
                     border-radius: .5em;
-                }
-
-                h3 {}
-            }
-
-            .info-container {
-                h3 {}
-
-                ul {
-
-                    li {
-
-
-                        a {
-
-
-                            img {}
-                        }
-
-                        &>div {
-
-
-                            p {}
-                        }
-                    }
                 }
             }
         }
