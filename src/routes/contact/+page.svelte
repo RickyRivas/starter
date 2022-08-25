@@ -1,5 +1,7 @@
 <script>
-	import '../../styles/pages/contact.scss';
+	import SubHeader from './../../lib/header/SubHeader.svelte';
+	import './contact.scss';
+	let pageTitle = 'Contact Us';
 </script>
 
 <svelte:head>
@@ -7,6 +9,7 @@
 	<meta name="description" content="" />
 </svelte:head>
 
+<SubHeader {pageTitle} />
 <main id="contact">
 	<div class="container">
 		<div class="info-container">

@@ -1,6 +1,8 @@
 <script>
 	// import external styles for this page
-	import '../../styles/pages/about.scss';
+	import SubHeader from '../../lib/header/SubHeader.svelte';
+	let pageTitle = 'About Us';
+	import './about.scss';
 </script>
 
 <svelte:head>
@@ -8,6 +10,7 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
+<SubHeader {pageTitle} />
 <main id="about">
 	<div class="content">
 		<h1>About this app</h1>

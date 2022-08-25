@@ -1,6 +1,8 @@
 <script>
 	// External styles
-	import '../../styles/pages/portfolio.scss';
+	import SubHeader from '../../lib/header/SubHeader.svelte';
+	import './portfolio.scss';
+	let pageTitle = 'Our Portfolio';
 </script>
 
 <svelte:head>
@@ -8,6 +10,7 @@
 	<meta name="description" content="" />
 </svelte:head>
 
+<SubHeader {pageTitle} />
 <main id="portfolio">
 	<h1>Portfolio</h1>
 </main>
