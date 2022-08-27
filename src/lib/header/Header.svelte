@@ -33,8 +33,8 @@
 			<li class:active={$page.url.pathname === '/'} class="link">
 				<a href="/" on:click={toggle}>Home</a>
 			</li>
-			<li class:active={$page.url.pathname === '/services'} class="link">
-				<a href="/services" on:click={toggle}>Services</a>
+			<li class:active={$page.url.pathname === '/testimonials'} class="link">
+				<a href="/testimonials" on:click={toggle}>Testimonials</a>
 			</li>
 			<li class:active={$page.url.pathname === '/portfolio'} class="link">
 				<a href="/portfolio" on:click={toggle}>Portfolio</a>
@@ -50,7 +50,7 @@
 					<img
 						class=""
 						src="/instagram.svg"
-						alt=""
+						alt="instagram"
 						width="25"
 						height="25"
 						loading="lazy"
@@ -62,7 +62,7 @@
 					<img
 						class=""
 						src="/facebook.svg"
-						alt=""
+						alt="facebook"
 						width="25"
 						height="25"
 						loading="lazy"

@@ -1,6 +1,6 @@
 $long-height: 23em;
 $base-length: 17em;
-$margin: .3em;
+$margin: .5em;
 
 main#portfolio {
     .grid {
@@ -23,8 +23,7 @@ main#portfolio {
         }
 
         @media only screen and (min-width: 1200px) {
-            font-size: inherit;
-            /* custom opt-out 979oo */
+            font-size: 1.1em;
         }
 
         .col {
@@ -39,6 +38,8 @@ main#portfolio {
                 margin: $margin;
                 transition: all .5s;
                 position: relative;
+                border-radius: .5em;
+                overflow: hidden;
 
                 img {
                     position: absolute;
