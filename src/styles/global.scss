@@ -18,8 +18,12 @@
 }
 
 html {
-    font-size: 16px;
     font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+
+    @media screen and (min-width: 1300px) {
+        font-size: 20px;
+    }
 }
 
 body {
@@ -36,18 +40,6 @@ body {
     }
 }
 
-// Scale font-szie from a min of 16px (at 320px viewpoort) to a maximum of 22px (at a 1000px viewport)
-@media screen and (min-width: 320px) {
-    html {
-        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    html {
-        font-size: 20px;
-    }
-}
 
 main {
     width: 100%;
@@ -66,8 +58,13 @@ h6 {
     color: var(--heading-color);
 }
 
+ul li {
+    color: var(--text-color);
+}
+
 p {
     color: var(--text-color);
+    line-height: 1.2;
 }
 
 .btn {
@@ -78,5 +75,5 @@ p {
     color: white;
     text-decoration: none;
     margin: .5em;
-    border-radius: 2em;
+    border-radius: .5em;
 }
