@@ -49,7 +49,7 @@
 				<a href="/">
 					<img
 						class=""
-						src="/instagram.svg"
+						src="/social/instagram.svg"
 						alt="instagram"
 						width="25"
 						height="25"
@@ -61,7 +61,7 @@
 				<a href="/">
 					<img
 						class=""
-						src="/facebook.svg"
+						src="/social/facebook.svg"
 						alt="facebook"
 						width="25"
 						height="25"

@@ -114,7 +114,7 @@ header {
 
                 &.active {
                     a {
-                        color: orangered;
+                        color: var(--accent-color);
                     }
                 }
             }
