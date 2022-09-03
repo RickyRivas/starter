@@ -1,11 +1,14 @@
 <script>
+	// business info from store
+	import { businessInfo } from '../business.js';
+	// components/ etc
 	import SubHeader from './../../lib/header/SubHeader.svelte';
 	import './contact.scss';
 	let pageTitle = 'Contact Us';
 </script>
 
 <svelte:head>
-	<title>Contact Us</title>
+	<title>{businessInfo.companyName} | {pageTitle} | {businessInfo.cityAndState}</title>
 	<meta name="description" content="" />
 </svelte:head>
 

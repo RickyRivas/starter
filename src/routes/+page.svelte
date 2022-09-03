@@ -1,10 +1,12 @@
 <script>
+	import { businessInfo } from './business.js';
+	import SubFooter from '../lib/header/SubFooter.svelte';
 	import '../styles/pages/home.scss';
 	import '../styles/quick.scss';
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>{businessInfo.companyName} | {businessInfo.industry} | {businessInfo.cityAndState}</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
@@ -169,3 +171,7 @@
 		</div>
 	</section>
 </main>
+<!-- ============================================ -->
+<!--                 SubFooter                    -->
+<!-- ============================================ -->
+<SubFooter />

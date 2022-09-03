@@ -1,6 +1,9 @@
 <script>
+	// business info from store
+	import { businessInfo } from '../business.js';
 	// External styles
 	import { fade } from 'svelte/transition';
+	import SubFooter from '../../lib/header/SubFooter.svelte';
 	import SubHeader from '../../lib/header/SubHeader.svelte';
 	import './misc.scss';
 	let pageTitle = 'Testimonials';
@@ -40,7 +43,7 @@
 </script>
 
 <svelte:head>
-	<title>Testimonials</title>
+	<title>{businessInfo.companyName} | {pageTitle} | {businessInfo.cityAndState}</title>
 	<meta name="description" content="" />
 </svelte:head>
 
@@ -81,3 +84,4 @@
 		{/each}
 	</div>
 </main>
+<SubFooter />

@@ -1,12 +1,15 @@
 <script>
+	// import store to tie business info to this page
+	import { businessInfo } from '../business.js';
 	// import external styles for this page
+	import SubFooter from '../../lib/header/SubFooter.svelte';
 	import SubHeader from '../../lib/header/SubHeader.svelte';
 	let pageTitle = 'About Us';
 	import './about.scss';
 </script>
 
 <svelte:head>
-	<title>About</title>
+	<title>{businessInfo.companyName} | {pageTitle} | {businessInfo.cityAndState}</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
 
@@ -62,3 +65,4 @@
 		</div>
 	</div>
 </main>
+<SubFooter />

@@ -1,12 +1,15 @@
 <script>
+	// business info from store
+	import { businessInfo } from '../business.js';
 	// External styles
+	import SubFooter from '../../lib/header/SubFooter.svelte';
 	import SubHeader from '../../lib/header/SubHeader.svelte';
 	import './portfolio.scss';
 	let pageTitle = 'Our Portfolio';
 </script>
 
 <svelte:head>
-	<title>Our Portfolio</title>
+	<title>{businessInfo.companyName} | {pageTitle} | {businessInfo.cityAndState}</title>
 	<meta name="description" content="" />
 </svelte:head>
 
@@ -120,3 +123,4 @@
 		</div>
 	</div>
 </main>
+<SubFooter />
