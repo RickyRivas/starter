@@ -1,5 +1,5 @@
 // Nav vars
-$link-color: #000;
+$link-color: #202020;
 $margin-top: 3.055em;
 $font-size: 1em;
 
@@ -43,6 +43,37 @@ header {
     }
 
     @media only screen and (min-width: 64em) {
+        border-bottom: 0;
+        background-color: transparent;
+
+        &::before {
+            content: '';
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transform: translateY(-100%);
+            transition: all .5s;
+            box-shadow: var(--box-shadow);
+        }
+
+        &.scroll {
+            &::before {
+                transform: translateY(0);
+            }
+
+            nav {
+                ul.links {
+                    li a {
+                        color: $link-color !important;
+                    }
+                }
+            }
+        }
+
         .nav-overlay {
             display: none;
         }
@@ -110,13 +141,19 @@ header {
                     color: $link-color;
                     text-decoration: none;
                     text-align: left;
+                    transition: color .5s;
+
+                    @media only screen and (min-width: 64em) {
+                        color: white;
+                    }
                 }
 
                 &.active {
                     a {
-                        color: var(--accent-color);
+                        color: var(--accent-color) !important;
                     }
                 }
+
             }
 
             li.link.social {
@@ -173,10 +210,6 @@ header {
                     padding: 0;
                     margin: 0 .5em;
                     width: auto;
-
-                    a {
-                        color: #202020;
-                    }
                 }
 
                 li.link.social {

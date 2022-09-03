@@ -16,7 +16,10 @@ export let businessInfo = {
             friday: '',
             saturday: '',
             sunday: '',
-        }
+    },
+    socialMediaUrls: {
+        facebook: ''
+    }
 }
 // 3 main services 
 export let services = [

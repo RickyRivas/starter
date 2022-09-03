@@ -7,10 +7,13 @@
 		isActive = !isActive;
 		document.body.classList.toggle('is-active');
 	};
+	// scroll event
+	let y;
 </script>
 
+<svelte:window bind:scrollY={y} />
 <!-- Navigation Start -->
-<header>
+<header class={y >= 100 ? 'scroll' : ''}>
 	<nav>
 		<a href="/" class="logo-wrapper">
 			<svg
