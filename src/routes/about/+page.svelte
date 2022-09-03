@@ -1,6 +1,6 @@
 <script>
 	// import store to tie business info to this page
-	import { businessInfo } from '../business.js';
+	import { businessInfo } from '../+page';
 	// import external styles for this page
 	import SubFooter from '../../lib/header/SubFooter.svelte';
 	import SubHeader from '../../lib/header/SubHeader.svelte';
@@ -13,8 +13,14 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
+<!-- ============================================ -->
+<!--                 subhead                      -->
+<!-- ============================================ -->
 <SubHeader {pageTitle} />
 <main id="about">
+	<!-- ============================================ -->
+	<!--                 Main About                   -->
+	<!-- ============================================ -->
 	<div class="container">
 		<div class="img-container">
 			<img
@@ -65,4 +71,7 @@
 		</div>
 	</div>
 </main>
+<!-- ============================================ -->
+<!--                 subfoot                      -->
+<!-- ============================================ -->
 <SubFooter />

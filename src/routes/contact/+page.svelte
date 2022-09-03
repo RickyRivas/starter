@@ -1,6 +1,6 @@
 <script>
 	// business info from store
-	import { businessInfo } from '../business.js';
+	import { businessInfo } from '../+page';
 	// components/ etc
 	import SubHeader from './../../lib/header/SubHeader.svelte';
 	import './contact.scss';

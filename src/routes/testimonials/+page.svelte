@@ -1,6 +1,6 @@
 <script>
 	// business info from store
-	import { businessInfo } from '../business.js';
+	import { businessInfo } from '../+page';
 	// External styles
 	import { fade } from 'svelte/transition';
 	import SubFooter from '../../lib/header/SubFooter.svelte';

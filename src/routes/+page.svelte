@@ -1,5 +1,5 @@
 <script>
-	import { businessInfo } from './business.js';
+	import { businessInfo } from './+page';
 	import SubFooter from '../lib/header/SubFooter.svelte';
 	import '../styles/pages/home.scss';
 	import '../styles/quick.scss';
