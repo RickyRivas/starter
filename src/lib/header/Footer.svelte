@@ -1,4 +1,6 @@
 <script>
+	// business info
+	import { businessInfo } from '../.././routes/+page';
 	import { page } from '$app/stores';
 	import '../../styles/layout/footer.scss';
 	// enter url in order to display the social on site
@@ -28,12 +30,6 @@
 			url: ''
 		}
 	];
-	// Business info
-	let business = 'Business Name';
-	let googleLink = '_google_url';
-	let address = '1234 East Tulsa, Ok';
-	let phone = '(918)123-4567';
-	let email = '';
 </script>
 
 <footer>
@@ -131,13 +127,13 @@
 				<h3>Contact Us</h3>
 				<ul>
 					<li>
-						<a href="mailto:{email}">Click to Email</a>
+						<a href="mailto:{businessInfo.email}">Click to Email</a>
 					</li>
 					<li>
-						<a href="tel:{phone}"><span>Phone:</span> {phone}</a>
+						<a href="tel:{businessInfo.phone}"><span>Phone:</span> {businessInfo.phone}</a>
 					</li>
 					<li>
-						<a href={googleLink}><span>Location:</span> {address}</a>
+						<a href={businessInfo.googleLink}><span>Location:</span> {businessInfo.fullAddress}</a>
 					</li>
 				</ul>
 			</div>
@@ -146,7 +142,7 @@
 </footer>
 <div class="credit">
 	<p>
-		© 2022 {business}. Custom coded and designed By
+		© 2022 {businessInfo.companyName}. Custom coded and designed By
 		<a href="https://www.rivaswebdesigns.com/">Rivas Web Designs</a>
 	</p>
 </div>

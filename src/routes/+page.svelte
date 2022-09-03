@@ -1,5 +1,5 @@
 <script>
-	import { businessInfo } from './+page';
+	import { businessInfo, services } from './+page';
 	import SubFooter from '../lib/header/SubFooter.svelte';
 	import '../styles/pages/home.scss';
 	import '../styles/quick.scss';
@@ -35,7 +35,7 @@
 				make this 2-3 lines tall.
 			</p>
 			<div class="btns">
-				<a href="contact.html" class="btn">Main Call to Action</a>
+				<a href="/contact" class="btn">Main Call to Action</a>
 			</div>
 		</div>
 	</section>
@@ -44,7 +44,7 @@
 	<!-- ============================================ -->
 	<section id="services">
 		<div class="container">
-			{#each { length: 3 } as _, i}
+			{#each services as { name, description }, i}
 				<div class="item">
 					<div class="icon">
 						<img
@@ -57,10 +57,9 @@
 							decoding="async"
 						/>
 					</div>
-					<h2>Service {i + 1}</h2>
+					<h2>{name}</h2>
 					<p>
-						Talk about the service with keywords people will be searching for it by. Keep it 1-2
-						sentences.
+						{description}
 					</p>
 				</div>
 			{/each}

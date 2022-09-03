@@ -1,45 +1,12 @@
 <script>
 	// business info from store
-	import { businessInfo } from '../+page';
-	// External styles
+	import { businessInfo, reviews } from '../+page';
+	// Base
 	import { fade } from 'svelte/transition';
 	import SubFooter from '../../lib/header/SubFooter.svelte';
 	import SubHeader from '../../lib/header/SubHeader.svelte';
 	import './misc.scss';
 	let pageTitle = 'Testimonials';
-	let stars = 5;
-	let reviews = [
-		{
-			testifier: 'Valued Customer',
-			review:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, molestie dolor ac facilis egestas eget. Viverra pellentesque in nisl porta porttitor auctor ut dignissim.'
-		},
-		{
-			testifier: 'Valued Customer',
-			review:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, molestie dolor ac facilis egestas eget. Viverra pellentesque in nisl porta porttitor auctor ut dignissim.'
-		},
-		{
-			testifier: 'Valued Customer',
-			review:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, molestie dolor ac facilis egestas eget. Viverra pellentesque in nisl porta porttitor auctor ut dignissim.'
-		},
-		{
-			testifier: 'Valued Customer',
-			review:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, molestie dolor ac facilis egestas eget. Viverra pellentesque in nisl porta porttitor auctor ut dignissim.'
-		},
-		{
-			testifier: 'Valued Customer',
-			review:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, molestie dolor ac facilis egestas eget. Viverra pellentesque in nisl porta porttitor auctor ut dignissim.'
-		},
-		{
-			testifier: 'Valued Customer',
-			review:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, molestie dolor ac facilis egestas eget. Viverra pellentesque in nisl porta porttitor auctor ut dignissim.'
-		}
-	];
 </script>
 
 <svelte:head>
@@ -53,7 +20,7 @@
 		{#each reviews as { review, testifier }, i}
 			<div class="item" in:fade={{ y: 200, duration: 1000, delay: i * 200 }}>
 				<div class="stars">
-					{#each { length: stars } as _}
+					{#each { length: 5 } as _}
 						<svg
 							width="30"
 							height="30"

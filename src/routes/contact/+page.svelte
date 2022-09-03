@@ -28,14 +28,14 @@
 					<img src="/contact/phone-callg.svg" alt="Phone Icon" height="50" width="50" />
 					<div>
 						<p>Give Us a Call</p>
-						<a href="/" class="phone">(918) 123 - 4567</a>
+						<a href="tel:{businessInfo.phone}" class="phone">{businessInfo.phone}</a>
 					</div>
 				</li>
 				<li>
 					<img src="/contact/locationg.svg" alt="Phone Icon" height="50" width="50" />
 					<div>
 						<p>Our Location</p>
-						<a href="/" class="location">1234 E Street, Tulsa, Oklahoma</a>
+						<a href={businessInfo.googleLink} class="location">{businessInfo.fullAddress}</a>
 					</div>
 				</li>
 				<li>
