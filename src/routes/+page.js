@@ -17,9 +17,49 @@ export let businessInfo = {
             saturday: '',
             sunday: '',
     },
-    socialMediaUrls: {
-        facebook: ''
-    }
+    socials: [
+		{
+			platform: 'facebook',
+			url: '/'
+		},
+		{
+			platform: 'google',
+			url: '/'
+		},
+		{
+			platform: 'tiktok',
+			url: '/'
+		},
+		{
+			platform: 'instagram',
+			url: '/'
+		},
+		{
+			platform: 'twitter',
+			url: ''
+		},
+		{
+			platform: 'youtube',
+			url: ''
+		}
+    ],
+    ftServices: [
+        {
+            service: 'Service One'
+        },
+        {
+            service: 'Service Two'
+        },
+        {
+            service: 'Service Three'
+        },
+        {
+            service: 'Service Four'
+        },
+        {
+            service: 'Service Five'
+        }
+    ]
 }
 // 3 main services 
 export let services = [

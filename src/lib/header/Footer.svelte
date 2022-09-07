@@ -3,33 +3,7 @@
 	import { businessInfo } from '../.././routes/+page';
 	import { page } from '$app/stores';
 	import '../../styles/layout/footer.scss';
-	// enter url in order to display the social on site
-	let socials = [
-		{
-			platform: 'facebook',
-			url: '/'
-		},
-		{
-			platform: 'google',
-			url: '/'
-		},
-		{
-			platform: 'tiktok',
-			url: '/'
-		},
-		{
-			platform: 'instagram',
-			url: '/'
-		},
-		{
-			platform: 'twitter',
-			url: ''
-		},
-		{
-			platform: 'youtube',
-			url: ''
-		}
-	];
+	import { each } from 'svelte/internal';
 </script>
 
 <footer>
@@ -85,28 +59,18 @@
 		<div class="item">
 			<h3>Services</h3>
 			<ul>
-				<li>
-					<a href="/">Service One</a>
-				</li>
-				<li>
-					<a href="/">Service Two</a>
-				</li>
-				<li>
-					<a href="/">Service Three</a>
-				</li>
-				<li>
-					<a href="/">Service Four</a>
-				</li>
-				<li>
-					<a href="/">Service Five</a>
-				</li>
+				{#each businessInfo.ftServices as { service }}
+					<li>
+						<a href="/">{service}</a>
+					</li>
+				{/each}
 			</ul>
 		</div>
 		<div class="item">
 			<div class="subitem">
 				<h3>Keep in touch</h3>
 				<div class="socialmedia">
-					{#each socials as social}
+					{#each businessInfo.socials as social}
 						{#if social.url.length >= 1}
 							<a class={social.platform} aria-label={social.platform} href={social.url}>
 								<img
@@ -142,7 +106,7 @@
 </footer>
 <div class="credit">
 	<p>
-		©2022 {businessInfo.companyName}. Custom coded and designed By
+		©2022 {businessInfo.companyName}.<br /> Custom coded and designed By
 		<a href="https://www.rivaswebdesigns.com/">Rivas Web Designs</a>
 	</p>
 </div>
