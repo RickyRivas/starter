@@ -7,7 +7,6 @@
 
 <svelte:head>
 	<title>{businessInfo.companyName} | {businessInfo.industry} | {businessInfo.cityAndState}</title>
-	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
 <main id="home">

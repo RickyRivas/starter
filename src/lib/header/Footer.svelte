@@ -142,7 +142,7 @@
 </footer>
 <div class="credit">
 	<p>
-		© 2022 {businessInfo.companyName}. Custom coded and designed By
+		©2022 {businessInfo.companyName}. Custom coded and designed By
 		<a href="https://www.rivaswebdesigns.com/">Rivas Web Designs</a>
 	</p>
 </div>

@@ -10,7 +10,7 @@ export async function GET() {
       xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
       xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
     >
-      <!-- <url> elements go here -->
+      <!-- <url> elements go here https://www.xml-sitemaps.com/ -->
     </urlset>`.trim(),
     {
       headers: {

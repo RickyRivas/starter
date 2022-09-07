@@ -9,7 +9,6 @@
 
 <svelte:head>
 	<title>{businessInfo.companyName} | {pageTitle} | {businessInfo.cityAndState}</title>
-	<meta name="description" content="" />
 </svelte:head>
 
 <SubHeader {pageTitle} />

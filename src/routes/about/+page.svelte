@@ -10,7 +10,6 @@
 
 <svelte:head>
 	<title>{businessInfo.companyName} | {pageTitle} | {businessInfo.cityAndState}</title>
-	<meta name="description" content="About this app" />
 </svelte:head>
 
 <!-- ============================================ -->

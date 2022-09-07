@@ -15,7 +15,7 @@
 <!-- Navigation Start -->
 <header class={y >= 100 ? 'scroll' : ''}>
 	<nav>
-		<a href="/" class="logo-wrapper">
+		<a href="/" class="logo">
 			<svg
 				width="219"
 				height="81"
@@ -78,7 +78,7 @@
 
 		<button
 			class="hamburger hamburger--squeeze {isActive ? 'is-active' : ''}"
-			type="button"
+			aria-label="toggle"
 			on:click={toggle}
 		>
 			<span class="hamburger-box">
