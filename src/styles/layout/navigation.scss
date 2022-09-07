@@ -133,7 +133,7 @@ header {
                 list-style: none;
                 width: 100%;
                 border-bottom: 1px solid #D9D9D7;
-                padding: 1em 0 1em 1em;
+                // padding: 1em 0 1em 1em;
                 display: block;
                 position: relative;
 
@@ -142,9 +142,12 @@ header {
                     text-decoration: none;
                     text-align: left;
                     transition: color .5s;
+                    padding: 1em 0 1em 1em;
+                    display: block;
 
                     @media only screen and (min-width: 64em) {
                         color: white;
+                        padding: 0;
                     }
                 }
 
