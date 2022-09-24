@@ -47,7 +47,7 @@
 			</ul>
 		</div>
 		<div class="form-container">
-			<form name="Contact Form" id="contact-form" method="POST" data-netlify="true">
+			<form name="Contact Form" id="contact-form" method="POST" netlify>
 				<div class="flex">
 					<div class="form-control dropdown">
 						<p>How did you hear about us?</p>
