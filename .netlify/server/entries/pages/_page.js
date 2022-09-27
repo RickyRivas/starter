@@ -1,3 +1,4 @@
+const prerender = true;
 let businessInfo = {
   companyName: "Company Name",
   cityAndState: "Tulsa, Ok",
@@ -104,6 +105,7 @@ let reviews = [
 ];
 export {
   businessInfo,
+  prerender,
   reviews,
   services
 };

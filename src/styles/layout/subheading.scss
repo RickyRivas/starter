@@ -5,6 +5,7 @@
 	    align-items: flex-end;
 	    padding-bottom: 3rem;
 	    position: relative;
+	    background: url(/img08m.webp) center / cover no-repeat;
 
 	    h1 {
 	        font-size: 2em;
@@ -22,24 +23,6 @@
 	        z-index: 2;
 	    }
 
-	    picture {
-	        position: absolute;
-	        width: 100%;
-	        height: 100%;
-	        top: 0;
-	        left: 0;
-	        object-fit: cover;
-
-	        img {
-	            position: absolute;
-	            width: 100%;
-	            height: 100%;
-	            top: 0;
-	            left: 0;
-	            object-fit: cover;
-	        }
-	    }
-
 	    .overlay {
 	        position: absolute;
 	        width: 100%;
@@ -55,6 +38,7 @@
 	@media (min-width: 768px) {
 	    #subheader {
 	        height: 15rem;
+	        background: url(/img08l.webp) center / cover no-repeat;
 	    }
 	}
 
