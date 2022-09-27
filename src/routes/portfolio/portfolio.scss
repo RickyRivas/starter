@@ -47,6 +47,7 @@ main#portfolio {
                 transition: all .5s;
                 position: relative;
                 overflow: hidden;
+                cursor: pointer;
 
                 @media only screen and (max-width: 47.975em) {
                     margin-bottom: 1.5em;
@@ -72,6 +73,7 @@ main#portfolio {
                     transition: all .5s;
                     pointer-events: none;
                 }
+
             }
 
             .flex {
@@ -94,7 +96,7 @@ main#portfolio {
                     transition: all .5s;
                     position: relative;
                     overflow: hidden;
-
+                    cursor: pointer;
 
                     img {
                         position: absolute;
