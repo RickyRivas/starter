@@ -20,7 +20,7 @@
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nemo sint tenetur non maxime
 				alias!
 			</p>
-			<form id="contact-form" method="POST" name="contact-form" data-netlify="true">
+			<form id="contact-form" method="POST" name="contact-form" netlify>
 				<input type="hidden" name="form-name" value="contact-form" />
 
 				<div class="form-control">
