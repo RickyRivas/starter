@@ -43,11 +43,11 @@
 					/>
 				</div>
 				<div class="form-control">
-					<label for="service-input">How did you hear about us?</label>
+					<label for="referral-input">How did you hear about us?</label>
 					<input
-						id="service-input"
+						id="referral-input"
 						type="text"
-						name="Services"
+						name="Referral"
 						placeholder="Facebook, Referral, Google"
 						required=""
 					/>
