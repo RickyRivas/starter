@@ -6,7 +6,7 @@
     --secondary-color: #d0dde9;
     --tertiary-color: #edf0f8;
     --accent-color: #2A7D2E;
-    --heading-color: rgba(0, 0, 0, 0.7);
+    --heading-color: rgba(0, 0, 0, 0.9);
     --text-color: #444444;
     --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -91,4 +91,16 @@ button {
         background-color: #fff;
         color: #202020;
     }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
