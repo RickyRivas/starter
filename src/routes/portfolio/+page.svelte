@@ -27,21 +27,60 @@
 					decoding="async"
 				/>
 			</div>
-			<div class="item">
-				<img
-					class=""
-					src="/portfolio/img02.webp"
-					width=""
-					height=""
-					alt=""
-					loading="lazy"
-					decoding="async"
-				/>
+			<div class="flex">
+				<div class="item">
+					<img
+						class=""
+						src="/portfolio/img02.webp"
+						width=""
+						height=""
+						alt=""
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+				<div class="item">
+					<img
+						class=""
+						src="/portfolio/img03.webp"
+						width=""
+						height=""
+						alt=""
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="flex">
+				<div class="item">
+					<img
+						class=""
+						src="/portfolio/img02.webp"
+						width=""
+						height=""
+						alt=""
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+				<div class="item">
+					<img
+						class=""
+						src="/portfolio/img03.webp"
+						width=""
+						height=""
+						alt=""
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
 			</div>
 			<div class="item">
 				<img
 					class=""
-					src="/portfolio/img03.webp"
+					src="/portfolio/img01.webp"
 					width=""
 					height=""
 					alt=""
@@ -54,17 +93,6 @@
 			<div class="item">
 				<img
 					class=""
-					src="/portfolio/img02.webp"
-					width=""
-					height=""
-					alt=""
-					loading="lazy"
-					decoding="async"
-				/>
-			</div>
-			<div class="item">
-				<img
-					class=""
 					src="/portfolio/img01.webp"
 					width=""
 					height=""
@@ -73,51 +101,29 @@
 					decoding="async"
 				/>
 			</div>
-			<div class="item">
-				<img
-					class=""
-					src="/portfolio/img01.webp"
-					width=""
-					height=""
-					alt=""
-					loading="lazy"
-					decoding="async"
-				/>
-			</div>
-		</div>
-		<div class="col">
-			<div class="item">
-				<img
-					class=""
-					src="/portfolio/img01.webp"
-					width=""
-					height=""
-					alt=""
-					loading="lazy"
-					decoding="async"
-				/>
-			</div>
-			<div class="item">
-				<img
-					class=""
-					src="/portfolio/img02.webp"
-					width=""
-					height=""
-					alt=""
-					loading="lazy"
-					decoding="async"
-				/>
-			</div>
-			<div class="item">
-				<img
-					class=""
-					src="/portfolio/img03.webp"
-					width=""
-					height=""
-					alt=""
-					loading="lazy"
-					decoding="async"
-				/>
+			<div class="flex">
+				<div class="item">
+					<img
+						class=""
+						src="/portfolio/img02.webp"
+						width=""
+						height=""
+						alt=""
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+				<div class="item">
+					<img
+						class=""
+						src="/portfolio/img03.webp"
+						width=""
+						height=""
+						alt=""
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
 			</div>
 		</div>
 	</div>
