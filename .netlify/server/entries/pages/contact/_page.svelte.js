@@ -11,7 +11,7 @@ ${validate_component(SubHeader, "SubHeader").$$render($$result, { pageTitle }, {
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nemo sint tenetur non maxime
 				alias!
 			</p>
-			<form id="${"contact-form"}" method="${"POST"}" name="${"contact-form"}" netlify><input type="${"hidden"}" name="${"form-name"}" value="${"contact-form"}">
+			<form id="${"contact-form"}" method="${"post"}" name="${"contact"}" netlify><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}">
 
 				<div class="${"form-control"}">
 					<label for="${"fname"}">Name</label>

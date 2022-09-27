@@ -7,7 +7,7 @@
       "_index.js"
     ],
     "dynamicImports": [
-      "src/hooks.server.js"
+      ".svelte-kit/build/hooks.js"
     ]
   },
   "src/routes/sitemap.xml/+server.js": {
@@ -157,9 +157,9 @@
       "_app/immutable/assets/SubHeader-e90e8444.css"
     ]
   },
-  "src/hooks.server.js": {
-    "file": "chunks/hooks.server.js",
-    "src": "src/hooks.server.js",
+  ".svelte-kit/build/hooks.js": {
+    "file": "chunks/hooks.js",
+    "src": ".svelte-kit/build/hooks.js",
     "isDynamicEntry": true
   }
 }
