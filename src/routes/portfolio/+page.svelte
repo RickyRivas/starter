@@ -26,14 +26,12 @@
 		});
 		showSwiper = !showSwiper;
 	};
-	//  page onload
 	onMount(() => {
 		imgs = Array.from(document.querySelectorAll('.item > img'));
 		imgs.forEach((img, i) => {
 			img.dataset.index = i;
 		});
 	});
-	// autofocus
 	async function autofocus(el) {
 		await tick();
 		el.focus();
