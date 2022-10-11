@@ -7,13 +7,13 @@ $font-size: 1em;
 header {
     width: 100vw;
     background-color: #f8f9fa;
-    border-bottom: 1px solid #D9D9D7;
     position: fixed;
-    transition: all .5s;
+    // transition: all .5s;
     display: block;
     top: 0;
     left: 0;
     z-index: 9999;
+    box-shadow: var(--box-shadow);
 
     &.is-active {
         box-shadow: none;
@@ -43,36 +43,39 @@ header {
     }
 
     @media only screen and (min-width: 64em) {
-        border-bottom: 0;
-        background-color: transparent;
+        // border-bottom: 0;
+        // background-color: transparent;
 
-        &::before {
-            content: '';
-            background-color: white;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            transform: translateY(-100%);
-            transition: all .5s;
-            box-shadow: var(--box-shadow);
-        }
+        // slide down
+        // &::before {
+        //     content: '';
+        //     background-color: white;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     z-index: -1;
+        //     transform: translateY(-100%);
+        //     transition: all .5s;
+        //     box-shadow: var(--box-shadow);
+        // }
 
-        &.scroll {
-            &::before {
-                transform: translateY(0);
-            }
 
-            nav {
-                ul.links {
-                    li a {
-                        color: $link-color !important;
-                    }
-                }
-            }
-        }
+        // onscroll 
+        // &.scroll {
+        // &::before {
+        //     transform: translateY(0);
+        // }
+
+        // nav {
+        //     ul.links {
+        //         li a {
+        //             color: $link-color !important;
+        //         }
+        //     }
+        // }
+        // }
 
         .nav-overlay {
             display: none;
@@ -84,9 +87,74 @@ header {
         }
     }
 
+    // contact information: 
+    .contactinfo {
+        background-color: rgba(0, 0, 0, .05);
+        display: block;
+        padding: .2em;
+
+        @media only screen and (max-width: 1023px) {
+            display: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: calc(1200/20)*1em;
+            margin: auto;
+            padding: 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            // location, phone, email, hrs
+            .info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    color: #202020;
+                    text-decoration: none;
+                    font-size: .75em;
+                    margin-right: 1em;
+                    transition: color .33s ease;
+
+                    &:nth-last-child(1) {
+                        margin: 0;
+                    }
+
+                    &:hover {
+                        color: var(--primary-color);
+                    }
+                }
+            }
+
+            // socials
+            .socials {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &>a {
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: .5em;
+
+                    img {
+                        width: 1em;
+                        height: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+    // entire nav
     nav {
         width: 100%;
-        max-width: 1200px;
+        max-width: calc(1200/20)*1em;
         margin: auto;
         display: flex;
         justify-content: space-between;
@@ -107,8 +175,7 @@ header {
             }
         }
 
-        // Nav Links
-        ul.links {
+        .inner-nav {
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
@@ -116,18 +183,79 @@ header {
             width: 100vw;
             height: 100%;
             background-color: #f8f9fa;
-            padding: 0em 0em 5em 0em;
+            padding: 5em 0em 5em 0em;
             transition: transform .3s ease-in-out;
             position: fixed;
             transform: translateX(100%);
-            top: $margin-top;
+            // top: $margin-top;
+            top: 0;
             right: 0;
             overflow: auto;
             z-index: 500;
 
+            @media only screen and (min-width: 768px) {
+                width: 50vw;
+            }
+
+            @media only screen and (min-width: 64em) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                width: auto;
+                height: auto;
+                position: relative;
+                transform: none;
+                padding: 0;
+
+                &.is-active {
+                    transform: none;
+                }
+            }
+
+            .inner-logo {
+                height: 2em;
+                width: auto;
+                position: absolute;
+                top: .5em;
+                left: .5em;
+
+                @media only screen and (min-width: 64em) {
+                    display: none;
+                }
+            }
+
             &.is-active {
                 transform: translateX(0%);
             }
+
+            // nav cta
+            #cta {
+                margin: 0 .5em;
+
+                @media only screen and (max-width: 1023px) {
+                    display: none;
+                }
+
+                &:hover {
+                    background-color: #202020;
+                    color: white;
+                }
+            }
+        }
+
+        // Nav Links
+        ul.links {
+            position: relative;
+            padding: 0em;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: transparent;
+            z-index: 1;
+            display: flex;
 
             li.link {
                 list-style: none;
@@ -145,15 +273,32 @@ header {
                     padding: 1em 0 1em 1em;
                     display: block;
 
+                    // @media only screen and (min-width: 64em) {
+                    //     color: white;
+                    //     padding: 0;
+                    // }
                     @media only screen and (min-width: 64em) {
-                        color: white;
-                        padding: 0;
+                        &::after {
+                            content: '';
+                            width: 0%;
+                            height: .1em;
+                            position: absolute;
+                            left: 0%;
+                            bottom: 0em;
+                            background-color: var(--primary-color);
+                            transition: width .33s ease;
+                        }
                     }
                 }
 
-                &.active {
+                &.active,
+                &:hover {
                     a {
                         color: var(--primary-color) !important;
+
+                        &::after {
+                            width: 100%;
+                        }
                     }
                 }
 
@@ -185,34 +330,19 @@ header {
                 }
             }
 
-            @media only screen and (min-width: 768px) {
-                width: 50vw;
-            }
-
             @media only screen and (min-width: 64em) {
-                position: relative;
-                padding: 0em;
-                width: auto;
-                height: auto;
-                min-height: auto;
-                transform: none;
-                justify-content: center;
-                align-items: center;
                 flex-direction: row;
-                background: transparent;
-                z-index: 1;
-                top: 0;
-                right: 0;
-
-                &.is-active {
-                    transform: none;
-                }
+                width: auto;
 
                 li.link {
                     border: 0;
                     padding: 0;
                     margin: 0 .5em;
                     width: auto;
+
+                    a {
+                        padding: 0;
+                    }
                 }
 
                 li.link.social {

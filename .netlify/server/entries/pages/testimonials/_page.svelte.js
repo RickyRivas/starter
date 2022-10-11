@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, v as validate_component, f as each } from "../../../chunks/index.js";
+import { c as create_ssr_component, f as escape, v as validate_component, e as each } from "../../../chunks/index.js";
 import { businessInfo, reviews } from "../_page.js";
 import { S as SubFooter } from "../../../chunks/SubFooter.js";
 import { S as SubHeader } from "../../../chunks/SubHeader.js";
