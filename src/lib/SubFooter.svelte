@@ -1,5 +1,5 @@
 <script>
-	import '../../styles/layout/subfooter.scss';
+	import '../styles/layout/subfooter.scss';
 </script>
 
 <div id="subfooter">

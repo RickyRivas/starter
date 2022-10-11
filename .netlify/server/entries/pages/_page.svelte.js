@@ -4,7 +4,7 @@ import { S as SubFooter } from "../../chunks/SubFooter.js";
 const home = "";
 const quick = "";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${$$result.head += `${$$result.title = `<title>${escape(businessInfo.companyName)} | ${escape(businessInfo.industry)} | ${escape(businessInfo.cityAndState)}</title>`, ""}`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-pujoj5 -->${$$result.title = `<title>${escape(businessInfo.companyName)} | ${escape(businessInfo.industry)} | ${escape(businessInfo.cityAndState)}</title>`, ""}<!-- HEAD_svelte-pujoj5 -->`, ""}
 
 <main id="${"home"}">
 	

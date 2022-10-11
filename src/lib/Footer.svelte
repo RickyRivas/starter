@@ -1,9 +1,8 @@
 <script>
 	// business info
-	import { businessInfo } from '../.././routes/+page';
+	import { businessInfo } from '../routes/+page';
 	import { page } from '$app/stores';
-	import '../../styles/layout/footer.scss';
-	import { each } from 'svelte/internal';
+	import '../styles/layout/footer.scss';
 </script>
 
 <footer>

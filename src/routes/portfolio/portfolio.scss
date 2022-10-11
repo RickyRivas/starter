@@ -1,6 +1,5 @@
 $long-height: calc(615/20)*1em;
 $base-length: 17em;
-
 $margin: .5em;
 
 main#portfolio {
@@ -13,19 +12,12 @@ main#portfolio {
         max-width: calc(1240/20)*1em;
         margin: auto;
         padding: 3em 0;
+        font-size: 2vw;
 
-        @media only screen and (max-width: 47.975em) {
-            font-size: 2vw;
-            /* mintab 480w */
-        }
-
-        @media only screen and (min-width: 48em) {
-            font-size: 1.5vw;
-            /* mintab 480w */
-        }
-
-        @media only screen and (min-width: 64em) {
-            font-size: inherit;
+        @media only screen and (min-width: 768px) {
+            // automatically use the lowest value between 1.4vw and the root font size 15px or 20px
+            // is 1em at 1024px and 1300px
+            font-size: calc(min(1.5vw, 1em));
         }
 
         .col {

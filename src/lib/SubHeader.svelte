@@ -2,7 +2,7 @@
 	// prop
 	export let pageTitle;
 	// external css
-	import '../../styles/layout/subheading.scss';
+	import '../styles/layout/subheading.scss';
 </script>
 
 <section id="subheader">

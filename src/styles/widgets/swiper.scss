@@ -85,7 +85,7 @@
 
         &:hover,
         &:focus {
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
         }
     }
 
@@ -104,7 +104,7 @@
         border: 0;
 
         &:hover {
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
         }
 
         img {

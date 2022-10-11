@@ -1,6 +1,6 @@
 <script>
 	import { businessInfo, services } from './+page';
-	import SubFooter from '../lib/header/SubFooter.svelte';
+	import SubFooter from '$lib/SubFooter.svelte';
 	import '../styles/pages/home.scss';
 	import '../styles/quick.scss';
 </script>

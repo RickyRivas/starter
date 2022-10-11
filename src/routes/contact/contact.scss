@@ -74,7 +74,7 @@ main#contact {
                     }
 
                     a {
-                        color: var(--accent-color);
+                        color: var(--primary-color);
                     }
                 }
             }
@@ -154,7 +154,7 @@ main#contact {
 
                         &:focus,
                         &:active {
-                            border: 1px solid var(--accent-color);
+                            border: 1px solid var(--primary-color);
                         }
                     }
 
@@ -182,7 +182,7 @@ main#contact {
 
                         &:focus,
                         &:active {
-                            border: 1px solid var(--accent-color);
+                            border: 1px solid var(--primary-color);
                         }
                     }
 
@@ -219,7 +219,7 @@ main#contact {
                     width: 100%;
                     transition: background-color .33s ease;
                     position: relative;
-                    background-color: var(--accent-color);
+                    background-color: var(--primary-color);
                     overflow: hidden;
                     border-radius: .2em;
 

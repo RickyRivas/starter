@@ -4,8 +4,8 @@
 	// endpoint
 	import { businessInfo } from '../+page';
 	// External styles
-	import SubFooter from '../../lib/header/SubFooter.svelte';
-	import SubHeader from '../../lib/header/SubHeader.svelte';
+	import SubFooter from '$lib/SubFooter.svelte';
+	import SubHeader from '$lib/SubHeader.svelte';
 	import './portfolio.scss';
 	import '../../styles/widgets/swiper.scss';
 	let pageTitle = 'Our Portfolio';
@@ -58,6 +58,9 @@
 					on:click={(e) => {
 						initSwiper(e.target.dataset.index);
 					}}
+					on:keydown={(e) => {
+						initSwiper(e.target.dataset.index);
+					}}
 				/>
 			</div>
 			<div class="flex">
@@ -73,6 +76,9 @@
 						on:click={(e) => {
 							initSwiper(e.target.dataset.index);
 						}}
+						on:keydown={(e) => {
+							initSwiper(e.target.dataset.index);
+						}}
 					/>
 				</div>
 				<div class="item">
@@ -85,6 +91,9 @@
 						loading="lazy"
 						decoding="async"
 						on:click={(e) => {
+							initSwiper(e.target.dataset.index);
+						}}
+						on:keydown={(e) => {
 							initSwiper(e.target.dataset.index);
 						}}
 					/>
@@ -105,6 +114,9 @@
 						on:click={(e) => {
 							initSwiper(e.target.dataset.index);
 						}}
+						on:keydown={(e) => {
+							initSwiper(e.target.dataset.index);
+						}}
 					/>
 				</div>
 				<div class="item">
@@ -117,6 +129,9 @@
 						loading="lazy"
 						decoding="async"
 						on:click={(e) => {
+							initSwiper(e.target.dataset.index);
+						}}
+						on:keydown={(e) => {
 							initSwiper(e.target.dataset.index);
 						}}
 					/>
@@ -132,6 +147,9 @@
 					loading="lazy"
 					decoding="async"
 					on:click={(e) => {
+						initSwiper(e.target.dataset.index);
+					}}
+					on:keydown={(e) => {
 						initSwiper(e.target.dataset.index);
 					}}
 				/>
@@ -150,6 +168,9 @@
 					on:click={(e) => {
 						initSwiper(e.target.dataset.index);
 					}}
+					on:keydown={(e) => {
+						initSwiper(e.target.dataset.index);
+					}}
 				/>
 			</div>
 			<div class="flex">
@@ -165,6 +186,9 @@
 						on:click={(e) => {
 							initSwiper(e.target.dataset.index);
 						}}
+						on:keydown={(e) => {
+							initSwiper(e.target.dataset.index);
+						}}
 					/>
 				</div>
 				<div class="item">
@@ -177,6 +201,9 @@
 						loading="lazy"
 						decoding="async"
 						on:click={(e) => {
+							initSwiper(e.target.dataset.index);
+						}}
+						on:keydown={(e) => {
 							initSwiper(e.target.dataset.index);
 						}}
 					/>

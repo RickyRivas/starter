@@ -2,8 +2,8 @@
 	// import store to tie business info to this page
 	import { businessInfo } from '../+page';
 	// import external styles for this page
-	import SubFooter from '../../lib/header/SubFooter.svelte';
-	import SubHeader from '../../lib/header/SubHeader.svelte';
+	import SubFooter from '$lib/SubFooter.svelte';
+	import SubHeader from '$lib/SubHeader.svelte';
 	let pageTitle = 'About Us';
 	import './about.scss';
 </script>

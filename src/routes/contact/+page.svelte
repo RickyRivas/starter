@@ -2,7 +2,7 @@
 	// business info from store
 	import { businessInfo } from '../+page';
 	// components/ etc
-	import SubHeader from './../../lib/header/SubHeader.svelte';
+	import SubHeader from '$lib/SubHeader.svelte';
 	import './contact.scss';
 	let pageTitle = 'Contact';
 </script>

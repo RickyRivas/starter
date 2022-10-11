@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import '../../styles/layout/navigation.scss';
+	import '../styles/layout/navigation.scss';
 	let isActive = false;
 
 	const toggle = () => {

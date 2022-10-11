@@ -5,7 +5,7 @@ import { S as SubHeader } from "../../../chunks/SubHeader.js";
 const about = "";
 let pageTitle = "About Us";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${$$result.head += `${$$result.title = `<title>${escape(businessInfo.companyName)} | ${escape(pageTitle)} | ${escape(businessInfo.cityAndState)}</title>`, ""}`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-xbfusu -->${$$result.title = `<title>${escape(businessInfo.companyName)} | ${escape(pageTitle)} | ${escape(businessInfo.cityAndState)}</title>`, ""}<!-- HEAD_svelte-xbfusu -->`, ""}
 
 
 
