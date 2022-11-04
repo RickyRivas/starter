@@ -1,15 +1,14 @@
 <script>
-	import { onMount } from 'svelte';
-	import { tick } from 'svelte';
-	// endpoint
-	import { businessInfo } from '../+page';
-	// External styles
+	import { URL, companyName, industry, cityAndState, DESCRIPTION } from '$lib/config.js';
+	import { page } from '$app/stores';
+	let pageTitle = $page.routeId.replace('/', '');
 	import SubFooter from '$lib/SubFooter.svelte';
 	import SubHeader from '$lib/SubHeader.svelte';
 	import './portfolio.scss';
 	import '../../styles/widgets/swiper.scss';
-	let pageTitle = 'Our Portfolio';
 	// Swiperjs
+	import { onMount } from 'svelte';
+	import { tick } from 'svelte';
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
 	import 'swiper/css';
 	import 'swiper/css/navigation';
@@ -39,7 +38,10 @@
 </script>
 
 <svelte:head>
-	<title>{businessInfo.companyName} | {pageTitle} | {businessInfo.cityAndState}</title>
+	<link rel="canonical" href={URL} />
+	<meta name="Description" content={DESCRIPTION} />
+	<meta property="og:description" content={DESCRIPTION} />
+	<title>{companyName} | {industry} | {cityAndState}</title>
 </svelte:head>
 
 <SubHeader {pageTitle} />

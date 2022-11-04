@@ -1,6 +1,6 @@
 <script>
-	// business info
-	import { businessInfo } from '../routes/+page';
+	import { phone, email, socials, fullAddress, googleEmbed, companyName } from '$lib/config.js';
+	import { services } from '../routes/+page';
 	import { page } from '$app/stores';
 	import '../styles/layout/footer.scss';
 </script>
@@ -58,9 +58,9 @@
 		<div class="item">
 			<h3>Services</h3>
 			<ul>
-				{#each businessInfo.ftServices as { service }}
+				{#each services as service}
 					<li>
-						<a href="/">{service}</a>
+						<a href="/">{service.name}</a>
 					</li>
 				{/each}
 			</ul>
@@ -69,7 +69,7 @@
 			<div class="subitem">
 				<h3>Keep in touch</h3>
 				<div class="socialmedia">
-					{#each businessInfo.socials as social}
+					{#each socials as social}
 						{#if social.url.length >= 1}
 							<a class={social.platform} aria-label={social.platform} href={social.url}>
 								<img
@@ -90,13 +90,16 @@
 				<h3>Contact Us</h3>
 				<ul>
 					<li>
-						<a href="mailto:{businessInfo.email}">Click to Email</a>
+						<a href="mailto:{email}">Click to Email</a>
 					</li>
 					<li>
-						<a href="tel:{businessInfo.phone}"><span>Phone:</span> {businessInfo.phone}</a>
+						<a
+							href="tel:{phone.replace('(', '').replace(')', '').replace('-', '').replace(' ', '')}"
+							><span>Phone:</span>{phone}</a
+						>
 					</li>
 					<li>
-						<a href={businessInfo.googleLink}><span>Location:</span> {businessInfo.fullAddress}</a>
+						<a href={googleEmbed}><span>Location:</span>{fullAddress}</a>
 					</li>
 				</ul>
 			</div>
@@ -105,7 +108,7 @@
 </footer>
 <div class="credit">
 	<p>
-		©2022 {businessInfo.companyName}.<br /> Custom coded and designed By
+		©2022 {companyName}.<br /> Custom coded and designed By
 		<a href="https://www.rivaswebdesigns.com/">Rivas Web Designs</a>
 	</p>
 </div>

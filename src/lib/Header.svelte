@@ -1,5 +1,5 @@
 <script>
-	import { businessInfo } from './../routes/+page.js';
+	import { phone, fullAddress, email, socials } from '$lib/config.js';
 	import { page } from '$app/stores';
 	import '../styles/layout/header.scss';
 	let isActive = false;
@@ -19,13 +19,16 @@
 	<div class="contactinfo">
 		<div class="container">
 			<div class="info">
-				<a href="/contact" class="location">1234 E Rivas ST.</a>
-				<a href="tel:" class="phone">(918) xxx-xxxx</a>
+				<a href="/contact" class="location">{fullAddress}</a>
+				<a
+					href="tel:{phone.replace('(', '').replace(')', '').replace('-', '').replace(' ', '')}"
+					class="phone">{phone}</a
+				>
 				<a href="/contact" class="hrs">Mon-Fri 10am - 11pm</a>
-				<a href="mailto:" class="email">info@business.com</a>
+				<a href="mailto:{email}" class="email">{email}</a>
 			</div>
 			<div class="socials">
-				{#each businessInfo.socials as social}
+				{#each socials as social}
 					{#if social.url.length >= 1}
 						<a class={social.platform} aria-label={social.platform} href={social.url}>
 							<img

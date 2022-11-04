@@ -4,4 +4,3 @@ This starter template is for all future projects for Rivas Web Designs. This is 
 
 
 ## More details coming soon.
-

@@ -1,16 +1,19 @@
 <script>
-	// business info from store
-	import { businessInfo, reviews } from '../+page';
-	// Base
+	import { URL, companyName, industry, cityAndState, DESCRIPTION } from '$lib/config.js';
+	import { reviews } from '../+page';
+	import { page } from '$app/stores';
+	let pageTitle = $page.routeId.replace('/', '');
 	import { fade } from 'svelte/transition';
 	import SubFooter from '$lib/SubFooter.svelte';
 	import SubHeader from '$lib/SubHeader.svelte';
 	import './misc.scss';
-	let pageTitle = 'Testimonials';
 </script>
 
 <svelte:head>
-	<title>{businessInfo.companyName} | {pageTitle} | {businessInfo.cityAndState}</title>
+	<link rel="canonical" href={URL} />
+	<meta name="Description" content={DESCRIPTION} />
+	<meta property="og:description" content={DESCRIPTION} />
+	<title>{companyName} | {industry} | {cityAndState}</title>
 </svelte:head>
 
 <SubHeader {pageTitle} />

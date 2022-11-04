@@ -1,12 +1,16 @@
 <script>
-	import { businessInfo, services } from './+page';
+	import { URL, companyName, industry, cityAndState, DESCRIPTION } from '$lib/config.js';
+	import { reviews, services } from './+page.js';
 	import SubFooter from '$lib/SubFooter.svelte';
 	import '../styles/pages/home.scss';
 	import '../styles/quick.scss';
 </script>
 
 <svelte:head>
-	<title>{businessInfo.companyName} | {businessInfo.industry} | {businessInfo.cityAndState}</title>
+	<link rel="canonical" href={URL} />
+	<meta name="Description" content={DESCRIPTION} />
+	<meta property="og:description" content={DESCRIPTION} />
+	<title>{companyName} | {industry} | {cityAndState}</title>
 </svelte:head>
 
 <main id="home">

@@ -10,3 +10,9 @@
 	<h1>{pageTitle}</h1>
 	<div class="overlay" />
 </section>
+
+<style>
+	h1 {
+		text-transform: capitalize;
+	}
+</style>

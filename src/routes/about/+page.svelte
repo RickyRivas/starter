@@ -1,15 +1,17 @@
 <script>
-	// import store to tie business info to this page
-	import { businessInfo } from '../+page';
-	// import external styles for this page
+	import { URL, companyName, industry, cityAndState, DESCRIPTION } from '$lib/config.js';
+	import { page } from '$app/stores';
+	let pageTitle = $page.routeId.replace('/', '');
 	import SubFooter from '$lib/SubFooter.svelte';
 	import SubHeader from '$lib/SubHeader.svelte';
-	let pageTitle = 'About Us';
 	import './about.scss';
 </script>
 
 <svelte:head>
-	<title>{businessInfo.companyName} | {pageTitle} | {businessInfo.cityAndState}</title>
+	<link rel="canonical" href={URL} />
+	<meta name="Description" content={DESCRIPTION} />
+	<meta property="og:description" content={DESCRIPTION} />
+	<title>{companyName} | {industry} | {cityAndState}</title>
 </svelte:head>
 
 <!-- ============================================ -->
