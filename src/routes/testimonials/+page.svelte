@@ -1,8 +1,8 @@
 <script>
 	import { URL, companyName, industry, cityAndState, DESCRIPTION } from '$lib/config.js';
 	import { reviews } from '../+page';
-	import { page } from '$app/stores';
-	let pageTitle = $page.routeId.replace('/', '');
+	// import { page } from '$app/stores';
+	let pageTitle = 'Testimonials';
 	import { fade } from 'svelte/transition';
 	import SubFooter from '$lib/SubFooter.svelte';
 	import SubHeader from '$lib/SubHeader.svelte';

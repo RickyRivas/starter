@@ -21,11 +21,12 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "src/routes/+page.js",
-      "_stores.js"
+      "_config.js",
+      "_stores.js",
+      "src/routes/+page.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-288c4957.css"
+      "_app/immutable/assets/_layout-73e7fff7.css"
     ]
   },
   "src/routes/+page.js": {
@@ -33,13 +34,17 @@
     "src": "src/routes/+page.js",
     "isEntry": true
   },
-  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "entries/fallbacks/error.svelte.js",
-    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
+  "src/routes/+error.svelte": {
+    "file": "entries/pages/_error.svelte.js",
+    "src": "src/routes/+error.svelte",
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_SubHeader.js",
       "_stores.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_error-5ac1a554.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -48,6 +53,7 @@
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_config.js",
       "src/routes/+page.js",
       "_SubFooter.js"
     ],
@@ -61,7 +67,7 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "src/routes/+page.js",
+      "_config.js",
       "_SubFooter.js",
       "_SubHeader.js"
     ],
@@ -80,11 +86,11 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "src/routes/+page.js",
+      "_config.js",
       "_SubHeader.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-b55cf2c8.css"
+      "_app/immutable/assets/_page-b9c7554e.css"
     ]
   },
   "src/routes/contact/+page.js": {
@@ -98,12 +104,12 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "src/routes/+page.js",
+      "_config.js",
       "_SubFooter.js",
       "_SubHeader.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-d755adaf.css"
+      "_app/immutable/assets/_page-3251682b.css"
     ]
   },
   "src/routes/portfolio/+page.js": {
@@ -117,6 +123,7 @@
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_config.js",
       "src/routes/+page.js",
       "_SubFooter.js",
       "_SubHeader.js"
@@ -133,10 +140,22 @@
   "_index.js": {
     "file": "chunks/index.js"
   },
+  "_config.js": {
+    "file": "chunks/config.js"
+  },
   "_stores.js": {
     "file": "chunks/stores.js",
     "imports": [
       "_index.js"
+    ]
+  },
+  "_SubHeader.js": {
+    "file": "chunks/SubHeader.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/SubHeader-68541c4c.css"
     ]
   },
   "_SubFooter.js": {
@@ -146,15 +165,6 @@
     ],
     "css": [
       "_app/immutable/assets/SubFooter-e6861659.css"
-    ]
-  },
-  "_SubHeader.js": {
-    "file": "chunks/SubHeader.js",
-    "imports": [
-      "_index.js"
-    ],
-    "css": [
-      "_app/immutable/assets/SubHeader-7fc142c2.css"
     ]
   },
   ".svelte-kit/build/hooks.js": {

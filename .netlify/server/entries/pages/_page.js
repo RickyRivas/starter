@@ -1,65 +1,4 @@
 const prerender = true;
-let businessInfo = {
-  companyName: "Company Name",
-  cityAndState: "Tulsa, Ok",
-  industry: "Construction",
-  phone: "(123)456-7890",
-  fullAddress: "1234 East Tulsa, Ok",
-  email: "/",
-  googleLink: "/",
-  businessHours: {
-    monday: "",
-    tuesday: "",
-    wednesday: "",
-    thursday: "",
-    friday: "",
-    saturday: "",
-    sunday: ""
-  },
-  socials: [
-    {
-      platform: "facebook",
-      url: "/"
-    },
-    {
-      platform: "google",
-      url: "/"
-    },
-    {
-      platform: "tiktok",
-      url: "/"
-    },
-    {
-      platform: "instagram",
-      url: "/"
-    },
-    {
-      platform: "twitter",
-      url: ""
-    },
-    {
-      platform: "youtube",
-      url: ""
-    }
-  ],
-  ftServices: [
-    {
-      service: "Service One"
-    },
-    {
-      service: "Service Two"
-    },
-    {
-      service: "Service Three"
-    },
-    {
-      service: "Service Four"
-    },
-    {
-      service: "Service Five"
-    }
-  ]
-};
 let services = [
   {
     name: "Service One",
@@ -104,7 +43,6 @@ let reviews = [
   }
 ];
 export {
-  businessInfo,
   prerender,
   reviews,
   services

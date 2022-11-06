@@ -1,5 +1,5 @@
 <script>
-	import { phone, email, socials, fullAddress, googleEmbed, companyName } from '$lib/config.js';
+	import { phone, email, socials, fullAddress, googleLink, companyName } from '$lib/config.js';
 	import { services } from '../routes/+page';
 	import { page } from '$app/stores';
 	import '../styles/layout/footer.scss';
@@ -99,7 +99,7 @@
 						>
 					</li>
 					<li>
-						<a href={googleEmbed}><span>Location:</span>{fullAddress}</a>
+						<a href={googleLink}><span>Location:</span>{fullAddress}</a>
 					</li>
 				</ul>
 			</div>

@@ -1,11 +1,12 @@
-import { c as create_ssr_component, f as escape, v as validate_component, e as each } from "../../../chunks/index.js";
-import { businessInfo, reviews } from "../_page.js";
+import { c as create_ssr_component, d as add_attribute, e as escape, v as validate_component, f as each } from "../../../chunks/index.js";
+import { U as URL, D as DESCRIPTION, c as companyName, i as industry, a as cityAndState } from "../../../chunks/config.js";
+import { reviews } from "../_page.js";
 import { S as SubFooter } from "../../../chunks/SubFooter.js";
 import { S as SubHeader } from "../../../chunks/SubHeader.js";
 const misc = "";
 let pageTitle = "Testimonials";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${$$result.head += `<!-- HEAD_svelte-xbfusu -->${$$result.title = `<title>${escape(businessInfo.companyName)} | ${escape(pageTitle)} | ${escape(businessInfo.cityAndState)}</title>`, ""}<!-- HEAD_svelte-xbfusu -->`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-4aibi6_START --><link rel="${"canonical"}"${add_attribute("href", URL, 0)}><meta name="${"Description"}"${add_attribute("content", DESCRIPTION, 0)}><meta property="${"og:description"}"${add_attribute("content", DESCRIPTION, 0)}>${$$result.title = `<title>${escape(companyName)} | ${escape(industry)} | ${escape(cityAndState)}</title>`, ""}<!-- HEAD_svelte-4aibi6_END -->`, ""}
 
 ${validate_component(SubHeader, "SubHeader").$$render($$result, { pageTitle }, {}, {})}
 <main id="${"services"}"><div class="${"container"}">${each(reviews, ({ review, testifier }, i) => {

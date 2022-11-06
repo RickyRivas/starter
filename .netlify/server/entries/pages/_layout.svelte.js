@@ -1,6 +1,7 @@
-import { c as create_ssr_component, b as subscribe, d as add_attribute, e as each, f as escape, v as validate_component } from "../../chunks/index.js";
-import { businessInfo } from "./_page.js";
+import { c as create_ssr_component, b as subscribe, d as add_attribute, e as escape, f as each, v as validate_component } from "../../chunks/index.js";
+import { f as fullAddress, p as phone, e as email, s as socials, g as googleLink, c as companyName } from "../../chunks/config.js";
 import { p as page } from "../../chunks/stores.js";
+import { services } from "./_page.js";
 const header = "";
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
@@ -9,11 +10,11 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 <header${add_attribute("class", "", 0)}>
-	<div class="${"contactinfo"}"><div class="${"container"}"><div class="${"info"}"><a href="${"/contact"}" class="${"location"}">1234 E Rivas ST.</a>
-				<a href="${"tel:"}" class="${"phone"}">(918) xxx-xxxx</a>
+	<div class="${"contactinfo"}"><div class="${"container"}"><div class="${"info"}"><a href="${"/contact"}" class="${"location"}">${escape(fullAddress)}</a>
+				<a href="${"tel:" + escape(phone.replace("(", "").replace(")", "").replace("-", "").replace(" ", ""), true)}" class="${"phone"}">${escape(phone)}</a>
 				<a href="${"/contact"}" class="${"hrs"}">Mon-Fri 10am - 11pm</a>
-				<a href="${"mailto:"}" class="${"email"}">info@business.com</a></div>
-			<div class="${"socials"}">${each(businessInfo.socials, (social) => {
+				<a href="${"mailto:" + escape(email, true)}" class="${"email"}">${escape(email)}</a></div>
+			<div class="${"socials"}">${each(socials, (social) => {
     return `${social.url.length >= 1 ? `<a${add_attribute("class", social.platform, 0)}${add_attribute("aria-label", social.platform, 0)}${add_attribute("href", social.url, 0)}><img class="${""}" src="${"/social/" + escape(social.platform, true) + ".svg"}" alt="${""}" width="${"25"}" height="${"25"}" decoding="${"async"}">
 						</a>` : ``}`;
   })}</div></div></div>
@@ -56,20 +57,20 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 				<li class="${["link", $page.url.pathname === "/about" ? "active" : ""].join(" ").trim()}"><a href="${"/about"}">About</a></li>
 				<li class="${["link", $page.url.pathname === "/contact" ? "active" : ""].join(" ").trim()}"><a href="${"/contact"}">Contact</a></li></ul></div>
 		<div class="${"item"}"><h3>Services</h3>
-			<ul>${each(businessInfo.ftServices, ({ service }) => {
-    return `<li><a href="${"/"}">${escape(service)}</a>
+			<ul>${each(services, (service) => {
+    return `<li><a href="${"/"}">${escape(service.name)}</a>
 					</li>`;
   })}</ul></div>
 		<div class="${"item"}"><div class="${"subitem"}"><h3>Keep in touch</h3>
-				<div class="${"socialmedia"}">${each(businessInfo.socials, (social) => {
+				<div class="${"socialmedia"}">${each(socials, (social) => {
     return `${social.url.length >= 1 ? `<a${add_attribute("class", social.platform, 0)}${add_attribute("aria-label", social.platform, 0)}${add_attribute("href", social.url, 0)}><img class="${""}" src="${"/social/" + escape(social.platform, true) + ".svg"}" alt="${""}" width="${"40"}" height="${"34"}" loading="${"lazy"}" decoding="${"async"}">
 							</a>` : ``}`;
   })}</div></div>
 			<div class="${"subitem"}"><h3>Contact Us</h3>
-				<ul><li><a href="${"mailto:" + escape(businessInfo.email, true)}">Click to Email</a></li>
-					<li><a href="${"tel:" + escape(businessInfo.phone, true)}"><span>Phone:</span> ${escape(businessInfo.phone)}</a></li>
-					<li><a${add_attribute("href", businessInfo.googleLink, 0)}><span>Location:</span> ${escape(businessInfo.fullAddress)}</a></li></ul></div></div></div></footer>
-<div class="${"credit"}"><p>\xA92022 ${escape(businessInfo.companyName)}.<br> Custom coded and designed By
+				<ul><li><a href="${"mailto:" + escape(email, true)}">Click to Email</a></li>
+					<li><a href="${"tel:" + escape(phone.replace("(", "").replace(")", "").replace("-", "").replace(" ", ""), true)}"><span>Phone:</span>${escape(phone)}</a></li>
+					<li><a${add_attribute("href", googleLink, 0)}><span>Location:</span>${escape(fullAddress)}</a></li></ul></div></div></div></footer>
+<div class="${"credit"}"><p>\xA92022 ${escape(companyName)}.<br> Custom coded and designed By
 		<a href="${"https://www.rivaswebdesigns.com/"}">Rivas Web Designs</a></p></div>`;
 });
 const ToTop_svelte_svelte_type_style_lang = "";

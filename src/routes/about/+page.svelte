@@ -1,7 +1,7 @@
 <script>
 	import { URL, companyName, industry, cityAndState, DESCRIPTION } from '$lib/config.js';
-	import { page } from '$app/stores';
-	let pageTitle = $page.routeId.replace('/', '');
+	// import { page } from '$app/stores';
+	let pageTitle = 'About Us';
 	import SubFooter from '$lib/SubFooter.svelte';
 	import SubHeader from '$lib/SubHeader.svelte';
 	import './about.scss';
