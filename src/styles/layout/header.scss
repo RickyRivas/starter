@@ -7,7 +7,7 @@ $font-size: 1em;
 header {
     width: 100vw;
     background-color: #f8f9fa;
-    position: fixed;
+    position: absolute;
     // transition: all .5s;
     display: block;
     top: 0;
@@ -21,7 +21,6 @@ header {
 
     &.scroll {
         // header onscroll effect
-        display: block;
     }
 
     .nav-overlay {

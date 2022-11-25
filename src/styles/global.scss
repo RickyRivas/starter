@@ -17,32 +17,26 @@
     padding: 0;
 }
 
-html {
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+
+    @media only screen and (max-width: 1023px) {
+        &.is-active {
+            position: fixed;
+        }
+    }
 
     @media screen and (min-width: 1300px) {
         font-size: 20px;
-        overflow: hidden;
-        overflow-y: scroll;
     }
 
     @media screen and (min-width: 2000px) {
         font-size: 1vw;
-    }
-}
-
-body {
-    position: relative;
-    height: 100%;
-    width: 100%;
-
-    &.is-active {
-        overflow: hidden;
-
-        @media only screen and (min-width: 64em) {
-            overflow: visible;
-        }
     }
 
     &.swiper-fixed {

@@ -70,7 +70,7 @@
 				<h3>Keep in touch</h3>
 				<div class="socialmedia">
 					{#each socials as social}
-						{#if social.url.length >= 1}
+						{#if social.url.length >= 2}
 							<a class={social.platform} aria-label={social.platform} href={social.url}>
 								<img
 									class=""
