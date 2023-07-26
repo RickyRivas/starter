@@ -11,36 +11,36 @@ export const email = 'biz@email.com'
 export const googleLink = ''
 export const businessHours = {
 	monday: '',
-    tuesday: '',
-    wednesday: '',
-    thursday: '',
-    friday: '',
-    saturday: '',
-    sunday: '',
+	tuesday: '',
+	wednesday: '',
+	thursday: '',
+	friday: '',
+	saturday: '',
+	sunday: '',
 }
 export const socials = [
-		{
-			platform: 'facebook',
-			url: '/'
-		},
-		{
-			platform: 'google',
-			url: '/'
-		},
-		{
-			platform: 'tiktok',
-			url: '/'
-		},
-		{
-			platform: 'instagram',
-			url: '/'
-		},
-		{
-			platform: 'twitter',
-			url: ''
-		},
-		{
-			platform: 'youtube',
-			url: ''
-		}
-    ]
+	{
+		platform: 'facebook',
+		url: '/'
+	},
+	{
+		platform: 'google',
+		url: '/'
+	},
+	{
+		platform: 'tiktok',
+		url: '/'
+	},
+	{
+		platform: 'instagram',
+		url: '/'
+	},
+	{
+		platform: 'twitter',
+		url: ''
+	},
+	{
+		platform: 'youtube',
+		url: ''
+	}
+]

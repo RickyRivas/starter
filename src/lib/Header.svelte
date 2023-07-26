@@ -144,5 +144,3 @@
 </header>
 
 <!-- Navigation End -->
-<style>
-</style>
